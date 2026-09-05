@@ -21,9 +21,9 @@ function App() {
     },[count])
 
 
-    function handleChange(e) {
-    setName(e.target.value.toUpperCase());
-}
+//     function handleChange(e) {
+//     setName(e.target.value.toUpperCase());
+//    }
 
 
     return(
