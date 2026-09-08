@@ -1,14 +1,44 @@
 import "./Home.css";
+import hero from "../../assets/hero.png"
 
 function Header() {
 
-    let n = 10;
-    let m = 20;
+
+    let arr = [10, 20, 30, 40, 50, "Charlie"];
+    
+    let users = [
+        { id: 1, name: "Alice", age: 25 },
+        { id: 2, name: "Bob", age: 30 },
+        { id: 3, name: "Charlie", age: 35 },
+        { id: 4, name: "David", age: 40 },
+        { id: 5, name: "Eve", age: 45 },
+    ]
+
+    let userList = users.map((obj,index)=> <h5>{index+=1} {obj.name} {obj.age}</h5>)
 
     return (
         <>
+
+          {/* {userList} */}
+
+          {/* {
+            users.map((obj, index)=>{
+                return(
+                    <h2>
+                        {index+=1} {obj.name} {obj.age}
+                    </h2>
+                )
+            })
+          } */}
+
+          {/* {users.map((obj,index)=><h6>{index+=1} {obj.name} {obj.age}</h6>)} */}
+
             <section>
-                <h2>Welcome to React JS Course! {n+m} </h2>
+
+            <img src={hero} alt="Not Found"/>
+
+
+                <h2>Welcome to React JS Course! </h2>
 
                 <p>
                     A component in React is a reusable and independent building
