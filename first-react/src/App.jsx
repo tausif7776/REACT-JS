@@ -7,23 +7,65 @@ import Signup from '../components/Signup'
 
 const App = () => {
 
-  const number = 20;
-  console.log(number);
+  const user = true;
+
+  // if-else statement to check if the user is logged in or not
+
+  // if (user) {
+  //   return (
+  //     <Routes>
+
+  //       <Route path="/" element={<Home />} />
+  //       <Route path="/course" element={<Course />} />
+  //     </Routes>
+  //   )
+  // } else {
+  //   return (
+
+  //     <Routes>
+
+  //       <Route path="/login" element={<Login />} />
+  //       <Route path="/signup" element={<Signup />} />
+  //     </Routes>
+  //   )
+  // }
+
+
+  // ternary operator to check if the user is logged in or not
+
+
+  // return (
+  //   <Routes>
+  //     {
+  //       user ? (
+  //         <>
+  //           <Route path="/" element={<Home />} />
+  //           <Route path="/course" element={<Course />} />
+  //         </>
+  //       ) : (
+  //         <>
+  //           <Route path="/login" element={<Login />} />
+  //           <Route path="/signup" element={<Signup />} />
+  //         </>
+  //       )}
+  //   </Routes>
+  // )
+
+
+  // logical AND operator to check if the user is logged in or not
 
   return (
-    <>
-
-      <Routes>
-        {/* <Route path="/" element={<Home name="Tausif" age={22} />} /> */}
-        <Route path="/" element={<Home num={number} />} />
+    <Routes>
+      {
+        user && (
+          <>
+            <Route path="/" element={<Home />} />
+            <Route path="/course" element={<Course />} />
+          </>
+        )}
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/course" element={<Course />} />
-      </Routes>
-
-
-    </>
+        <Route path="/signup" element={<Signup />} /> 
+    </Routes>
   )
 }
-
 export default App

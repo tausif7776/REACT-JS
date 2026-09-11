@@ -3,6 +3,7 @@ import React, { useRef } from 'react'
 const UseRef = () => {
 
     const headingRef = useRef(null)
+    console.log("Hello World");
 
     const changeText = () => {
         headingRef.current.textContent = "Hello React"

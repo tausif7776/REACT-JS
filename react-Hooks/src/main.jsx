@@ -8,6 +8,9 @@ import Course from '../components/Course.jsx'
 import CourseLifting from '../components/CourseLifting.jsx'
 import Bonus from '../components/Bonus.jsx'
 import UseRef from '../components/UseRef.jsx'
+import Event from '../components/Event.jsx'
+import Form from '../components/Form.jsx'
+import List from '../components/List.jsx'
 
 createRoot(document.getElementById('root')).render(
   // <App/>
@@ -16,5 +19,8 @@ createRoot(document.getElementById('root')).render(
   // <Course/>
   // <CourseLifting/>
   // <Bonus/>
-  <UseRef/>
+  // <UseRef/>
+  // <Event/>
+  // <Form/>
+  <List/>
 )
