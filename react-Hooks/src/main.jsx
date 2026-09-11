@@ -5,10 +5,14 @@ import App from './App.jsx'
 import UseEffect from '../components/UseEffect.jsx'
 import UseState from '../components/UseState.jsx'
 import Course from '../components/Course.jsx'
+import CourseLifting from '../components/CourseLifting.jsx'
+import Bonus from '../components/Bonus.jsx'
 
 createRoot(document.getElementById('root')).render(
   // <App/>
   // <UseState/>
   // <UseEffect/>
-  <Course/>
+  // <Course/>
+  // <CourseLifting/>
+  <Bonus/>
 )
