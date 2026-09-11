@@ -7,6 +7,7 @@ import UseState from '../components/UseState.jsx'
 import Course from '../components/Course.jsx'
 import CourseLifting from '../components/CourseLifting.jsx'
 import Bonus from '../components/Bonus.jsx'
+import UseRef from '../components/UseRef.jsx'
 
 createRoot(document.getElementById('root')).render(
   // <App/>
@@ -14,5 +15,6 @@ createRoot(document.getElementById('root')).render(
   // <UseEffect/>
   // <Course/>
   // <CourseLifting/>
-  <Bonus/>
+  // <Bonus/>
+  <UseRef/>
 )
