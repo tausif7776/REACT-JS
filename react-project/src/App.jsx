@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 
@@ -14,6 +13,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import InfoPage from "./pages/InfoPage";
+import Features from "./pages/Features"; // ✅ Add this
 
 function App() {
   const { pathname } = useLocation();
@@ -23,11 +23,13 @@ function App() {
     <>
       {!isDashboard && <Navbar />}
 
-      {/* Routes */}
       <main className="min-h-screen">
         <Routes>
           {/* Home */}
           <Route path="/" element={<Home />} />
+
+          {/* Features */}
+          <Route path="/features" element={<Features />} />
 
           {/* Courses */}
           <Route path="/courses" element={<Courses />} />
@@ -45,12 +47,72 @@ function App() {
           {/* Dashboard */}
           <Route path="/dashboard" element={<Dashboard />} />
 
-          <Route path="/about" element={<InfoPage title="About EduLearn" description="EduLearn helps learners build practical skills through accessible online courses." />} />
-          <Route path="/privacy" element={<InfoPage title="Privacy Policy" description="Your personal information is used only to provide and improve the EduLearn learning experience." />} />
-          <Route path="/terms" element={<InfoPage title="Terms & Conditions" description="Use EduLearn responsibly and respect the course content and community guidelines." />} />
-          <Route path="/forgot-password" element={<InfoPage title="Password Reset" description="Password reset is not connected to a backend yet. Please contact support@edulearn.com for help." actionLabel="Back to Login" actionTo="/login" />} />
-          <Route path="/profile" element={<InfoPage title="Profile" description="Profile management will be available when account storage is connected." actionLabel="Back to Dashboard" actionTo="/dashboard" />} />
-          <Route path="/settings" element={<InfoPage title="Settings" description="Account settings will be available when account storage is connected." actionLabel="Back to Dashboard" actionTo="/dashboard" />} />
+          {/* Information Pages */}
+          <Route
+            path="/about"
+            element={
+              <InfoPage
+                title="About EduLearn"
+                description="EduLearn helps learners build practical skills through accessible online courses."
+              />
+            }
+          />
+
+          <Route
+            path="/privacy"
+            element={
+              <InfoPage
+                title="Privacy Policy"
+                description="Your personal information is used only to provide and improve the EduLearn learning experience."
+              />
+            }
+          />
+
+          <Route
+            path="/terms"
+            element={
+              <InfoPage
+                title="Terms & Conditions"
+                description="Use EduLearn responsibly and respect the course content and community guidelines."
+              />
+            }
+          />
+
+          <Route
+            path="/forgot-password"
+            element={
+              <InfoPage
+                title="Password Reset"
+                description="Password reset is not connected to a backend yet. Please contact support@edulearn.com for help."
+                actionLabel="Back to Login"
+                actionTo="/login"
+              />
+            }
+          />
+
+          <Route
+            path="/profile"
+            element={
+              <InfoPage
+                title="Profile"
+                description="Profile management will be available when account storage is connected."
+                actionLabel="Back to Dashboard"
+                actionTo="/dashboard"
+              />
+            }
+          />
+
+          <Route
+            path="/settings"
+            element={
+              <InfoPage
+                title="Settings"
+                description="Account settings will be available when account storage is connected."
+                actionLabel="Back to Dashboard"
+                actionTo="/dashboard"
+              />
+            }
+          />
 
           {/* 404 Page */}
           <Route
@@ -76,4 +138,3 @@ function App() {
 }
 
 export default App;
-
